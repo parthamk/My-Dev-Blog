@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { createClient } from "contentful"
 import { Link } from 'react-router-dom'
+import Button from '@mui/material/Button';
 
 
 
@@ -46,7 +47,7 @@ const BlogList = () => {
                     }).format(isNaN(Date.parse(post.fields.createDate)) ? new Date() : new Date(post.fields.createDate))}
                   </small>
                 </p>
-                <hr />
+                
                 <p className='post-description'>
                     {post.fields.blogSummery}
                 </p>
@@ -54,12 +55,14 @@ const BlogList = () => {
               <div className="post-description">
                 <p>{post.fields.blogSummary}
                 </p>
+                {/* className="button button1" */}
                 <Link
                   to={`/blogDetails/${post.sys.id}`}
-                  className="button button1">
-                  Read More
+                  >
+                  <Button variant="contained">Read More</Button>
                 </Link>
               </div>
+              <hr />  
             </section>
           ))}
         </div>
