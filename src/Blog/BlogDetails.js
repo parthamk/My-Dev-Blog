@@ -5,7 +5,11 @@ import ReactMarkdown from 'react-markdown'
 
 const BlogDetails = () => {
     const [singleBlogpost, setSingleBlogpost] = useState([])
-    const client = createClient({ space: "ck1jpucpjqym", accessToken: "URubI-sJaaWB5Rm6bl6Uwbc7SIf03abIDMxVQH6_wbQ" })
+    const client = createClient({ 
+        space: "ck1jpucpjqym",
+        environment: 'master',
+        accessToken: "URubI-sJaaWB5Rm6bl6Uwbc7SIf03abIDMxVQH6_wbQ" 
+    })
     const {id} = useParams()
     console.log(id);
     useEffect(() => {
