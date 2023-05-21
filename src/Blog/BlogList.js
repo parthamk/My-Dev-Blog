@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 const BlogList = () => {
     const [blogPosts, setBlogPosts] = useState([])
     const client = createClient({ space: "ck1jpucpjqym", accessToken: "URubI-sJaaWB5Rm6bl6Uwbc7SIf03abIDMxVQH6_wbQ" })
-
+    {/*change space and accesstoken from your project id on contentful;*/}
     useEffect(() => {
       const getAllEntries = async () => {
         try {
